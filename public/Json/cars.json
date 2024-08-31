@@ -1,0 +1,97 @@
+{
+    "popularCars": [
+      {
+        "id": 1,
+        "name": "Koenigsegg",
+        "type": "Sport",
+        "price": "99.00",
+        "imgUrl": "/carAssets/Koenigsegg.png",
+        "fuel": "90L",
+        "transmission": "Manual",
+        "capacity": "2 People",
+        "liked": true
+      },
+      {
+        "id": 2,
+        "name": "Nissan GT - R",
+        "type": "Sport",
+        "price": "80.00",
+        "oldPrice": "100.00",
+        "imgUrl": "/carAssets/Gtr.png",
+        "fuel": "80L",
+        "transmission": "Manual",
+        "capacity": "2 People",
+        "liked": false
+      },
+      {
+        "id": 3,
+        "name": "Rolls - Royce",
+        "type": "Sedan",
+        "price": "96.00",
+        "imgUrl": "/carAssets/RolsRoice.png",
+        "fuel": "70L",
+        "transmission": "Manual",
+        "capacity": "4 People",
+        "liked": true
+      },
+      {
+        "id": 4,
+        "name": "All New Rush",
+        "type": "SUV",
+        "price": "72.00",
+        "imgUrl": "/carAssets/AllNewRush.png",
+        "fuel": "70L",
+        "transmission": "Manual",
+        "capacity": "4 People",
+        "liked": false
+      }
+    ],
+    "recommendationCars": [
+      {
+        "id": 1,
+        "name": "All New Rush",
+        "type": "SUV",
+        "price": "72.00",
+        "imgUrl": "/carAssets/AllNewRush.png",
+        "fuel": "70L",
+        "transmission": "Manual",
+        "capacity": "4 People",
+        "liked": false
+      },
+      {
+        "id": 2,
+        "name": "CR - V",
+        "type": "SUV",
+        "price": "80.00",
+        "imgUrl": "/carAssets/CRV.png",
+        "fuel": "80L",
+        "transmission": "Manual",
+        "capacity": "6 People",
+        "liked": true
+      },
+      {
+        "id": 3,
+        "name": "All New Terios",
+        "type": "SUV",
+        "price": "74.00",
+        "imgUrl": "/carAssets/AllNewTerios.png",
+        "fuel": "90L",
+        "transmission": "Manual",
+        "capacity": "6 People",
+        "liked": false
+      },
+      {
+        "id": 4,
+        "name": "Nissan GT - R",
+        "type": "Sport",
+        "price": "80.00",
+        "oldPrice": "100.00",
+        "imgUrl": "/carAssets/Gtr.png",
+        "fuel": "80L",
+        "transmission": "Manual",
+        "capacity": "2 People",
+        "liked": false
+      }
+    ]
+  }
+  

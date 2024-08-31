@@ -1,29 +1,43 @@
-.popular-cars {
-    margin-top: 40px;
+.popular-cars, .recommendation-cars {
+    margin-top: 20px;
   }
   
-  .popular-cars h3 {
+  .popular-cars h3, .recommendation-cars h3 {
     margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
   }
   
   .car-list {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 32px;
   }
   
-  /* Responsive styles */
+  .car-list .car-card {
+    flex: 1 1 calc(25% - 32px); /* 4 cards per row */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  
+  
+  /* Adjustments for responsiveness */
+  @media (max-width: 1024px) {
+    .car-list .car-card {
+      flex: 1 1 calc(33.33% - 32px); /* 3 cards per row */
+    }
+  }
+  
   @media (max-width: 768px) {
-    .car-list {
-      justify-content: space-around;
+    .car-list .car-card {
+      flex: 1 1 calc(50% - 32px); /* 2 cards per row */
     }
   }
   
   @media (max-width: 480px) {
-    .popular-cars h3 {
-      font-size: 20px;
+    .car-list .car-card {
+      flex: 1 1 100%; /* 1 card per row */
     }
   }
+  

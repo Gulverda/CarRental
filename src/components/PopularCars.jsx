@@ -1,44 +1,66 @@
-// src/components/PopularCars.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import CarCard from './CarCard';
 import '../CSS/PopularCars.css';
 
 const PopularCars = () => {
+  const [popularCars, setPopularCars] = useState([]);
+  const [recommendationCars, setRecommendationCars] = useState([]);
+
+  useEffect(() => {
+    fetch('/json/cars.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setPopularCars(data.popularCars || []);
+        setRecommendationCars(data.recommendationCars || []);
+      })
+      .catch(error => console.error('Error fetching car data:', error));
+  }, []);
+
   return (
-    <div className="popular-cars">
-      <h3>Popular Car</h3>
-      <div className="car-list">
-        <CarCard
-          name="Koenigsegg"
-          type="Sport"
-          price="99.00"
-          imgUrl="/images/car1.png" // Replace with actual paths
-          fuel="90L"
-          transmission="Manual"
-          capacity="2 People"
-          liked={true}
-        />
-        <CarCard
-          name="Nissan GT - R"
-          type="Sport"
-          price="80.00"
-          oldPrice="100.00"
-          imgUrl="/images/car2.png"
-          fuel="80L"
-          transmission="Manual"
-          capacity="2 People"
-          liked={false}
-        />
-        <CarCard
-          name="Rolls - Royce"
-          type="Sedan"
-          price="96.00"
-          imgUrl="/images/car3.png"
-          fuel="70L"
-          transmission="Manual"
-          capacity="4 People"
-          liked={true}
-        />
+    <div>
+      <div className="popular-cars">
+        <h3>Popular Cars</h3>
+        <div className="car-list">
+          {popularCars.map(car => (
+            <CarCard
+              key={car.id}
+              name={car.name}
+              type={car.type}
+              price={car.price}
+              oldPrice={car.oldPrice}
+              imgUrl={car.imgUrl}
+              fuel={car.fuel}
+              transmission={car.transmission}
+              capacity={car.capacity}
+              liked={car.liked}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="recommendation-cars">
+        <h3>Recommended Cars</h3>
+        <div className="car-list">
+          {recommendationCars.map(car => (
+            <CarCard
+              key={car.id}
+              name={car.name}
+              type={car.type}
+              price={car.price}
+              oldPrice={car.oldPrice}
+              imgUrl={car.imgUrl}
+              fuel={car.fuel}
+              transmission={car.transmission}
+              capacity={car.capacity}
+              liked={car.liked}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -14,11 +14,15 @@ const CarCard = ({ name, type, price, oldPrice, imgUrl, fuel, transmission, capa
           <span>{transmission}</span>
           <span>{capacity}</span>
         </div>
+        <div className="price_button" style={{display: "flex", justifyContent: "space-between"}}>
         <div className="car-price">
-          {oldPrice && <span className="old-price">${oldPrice}/day</span>}
           <span className="price">${price}/day</span>
+          {oldPrice && <span className="old-price">${oldPrice}</span>}
         </div>
-        <button>Rent Now</button>
+        <div className="rent_button">
+          <button>Rent Now</button>
+        </div>
+        </div>
         <i className={`icon heart ${liked ? 'liked' : ''}`}></i>
       </div>
     </div>
