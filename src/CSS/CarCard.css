@@ -1,0 +1,92 @@
+.car-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .car-card img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .car-info {
+    margin-top: 10px;
+  }
+  
+  .car-info h4 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .car-info p {
+    color: gray;
+    font-size: 14px;
+  }
+  
+  .car-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .car-price {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: gray;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .price {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .car-card button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .icon.heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .icon.heart.liked {
+    color: red;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .car-card {
+      width: 48%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .car-card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  

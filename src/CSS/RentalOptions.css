@@ -1,0 +1,79 @@
+/* RentalOptions.css */
+.rental-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    border-radius: 10px;
+  }
+  
+  .option {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+  .option label {
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .fields {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .fields select,
+  .fields input[type="date"],
+  .fields input[type="time"] {
+    width: 30%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  .swap-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #2a73ef;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 20px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .rental-options {
+      flex-direction: column;
+    }
+  
+    .option {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .fields select,
+    .fields input[type="date"],
+    .fields input[type="time"] {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .swap-icon {
+      display: none; /* Hide the swap icon on smaller screens */
+    }
+  }
+  

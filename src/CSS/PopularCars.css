@@ -1,0 +1,29 @@
+.popular-cars {
+    margin-top: 40px;
+  }
+  
+  .popular-cars h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .car-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .car-list {
+      justify-content: space-around;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .popular-cars h3 {
+      font-size: 20px;
+    }
+  }
