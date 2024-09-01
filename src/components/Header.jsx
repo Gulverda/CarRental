@@ -10,6 +10,7 @@ const Header = () => {
   const [allCars, setAllCars] = useState([]);
   const searchRef = useRef(null); // Reference to the search bar container
 
+  // Fetch all car data once when the component mounts
   useEffect(() => {
     fetch('/json/cars.json')
       .then(response => {
@@ -19,11 +20,13 @@ const Header = () => {
         return response.json();
       })
       .then(data => {
+        // Combine popular and recommendation cars into one list
         setAllCars([...data.popularCars || [], ...data.recommendationCars || []]);
       })
       .catch(error => console.error('Error fetching car data:', error));
   }, []);
 
+  // Handle clicking outside the search results to close the dropdown
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -35,15 +38,17 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Handle search input and filter the cars based on the search term
   const handleSearch = (event) => {
-    const query = event.target.value.toLowerCase();
+    const query = event.target.value.toLowerCase(); // Get the search term
     setSearchTerm(query);
 
+    // Filter the car list by name matching the search term
     const filteredCars = allCars.filter(car =>
       car.name.toLowerCase().includes(query)
     );
 
-    setResults(filteredCars);
+    setResults(filteredCars); // Update the results to display
   };
 
   return (

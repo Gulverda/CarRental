@@ -1,6 +1,9 @@
 // src/components/CarCard.js
 import React from 'react';
 import '../CSS/CarCard.css';
+import profile from '../assets/icons/profile.svg';
+import Transmission from '../assets/icons/Car.svg';
+import GasStation from '../assets/icons/gasStation.svg';
 
 const CarCard = ({ name, type, price, oldPrice, imgUrl, fuel, transmission, capacity, liked }) => {
   return (
@@ -10,9 +13,18 @@ const CarCard = ({ name, type, price, oldPrice, imgUrl, fuel, transmission, capa
         <h4>{name}</h4>
         <p>{type}</p>
         <div className="car-details">
-          <span>{fuel}</span>
-          <span>{transmission}</span>
-          <span>{capacity}</span>
+          <span>
+            <img src={GasStation} alt="GasStation" />
+            {fuel}
+          </span>
+          <span>
+            <img src={Transmission} alt="Transmission" />
+            {transmission}
+          </span>
+          <span>
+            <img src={profile} alt="Profile" />
+            {capacity}
+          </span>
         </div>
         <div className="price_button" style={{display: "flex", justifyContent: "space-between"}}>
         <div className="car-price">

@@ -34,10 +34,16 @@
     width: 30%;
     padding: 12px;
     border-radius: 5px;
-    border: 1px solid #ddd;
     font-size: 14px;
-    background-color: #f7f7f7;
+    border: none;
+    outline: none;
+    /* background-color: #f7f7f7; */
     color: #333;
+  }
+
+  .vertical_line{
+    width: 1px;
+    background-color: #C3D4E9;
   }
   
   .swap-icon {

@@ -46,11 +46,13 @@ const RentalOptions = () => {
               </option>
             ))}
           </select>
+          <div className="vertical_line"></div>
           <input
             type="date"
             value={pickUp.date}
             onChange={(e) => setPickUp({ ...pickUp, date: e.target.value })}
           />
+          <div className="vertical_line"></div>
           <input
             type="time"
             value={pickUp.time}
@@ -84,11 +86,13 @@ const RentalOptions = () => {
               </option>
             ))}
           </select>
+          <div className="vertical_line"></div>
           <input
             type="date"
             value={dropOff.date}
             onChange={(e) => setDropOff({ ...dropOff, date: e.target.value })}
           />
+          <div className="vertical_line"></div>
           <input
             type="time"
             value={dropOff.time}
