@@ -39,7 +39,7 @@ const RentalOptions = () => {
             value={pickUp.city}
             onChange={(e) => setPickUp({ ...pickUp, city: e.target.value })}
           >
-            <option value="">Select your city</option>
+            <option value="" disabled>Select your city</option>
             {cities.map(city => (
               <option key={city.id} value={city.name}>
                 {city.name}
@@ -51,12 +51,14 @@ const RentalOptions = () => {
             type="date"
             value={pickUp.date}
             onChange={(e) => setPickUp({ ...pickUp, date: e.target.value })}
+            placeholder="Select date"
           />
           <div className="vertical_line"></div>
           <input
             type="time"
             value={pickUp.time}
             onChange={(e) => setPickUp({ ...pickUp, time: e.target.value })}
+            placeholder="Select time"
           />
         </div>
       </div>
@@ -79,7 +81,7 @@ const RentalOptions = () => {
             value={dropOff.city}
             onChange={(e) => setDropOff({ ...dropOff, city: e.target.value })}
           >
-            <option value="">Select your city</option>
+            <option value="" disabled>Select your city</option>
             {cities.map(city => (
               <option key={city.id} value={city.name}>
                 {city.name}
@@ -91,12 +93,14 @@ const RentalOptions = () => {
             type="date"
             value={dropOff.date}
             onChange={(e) => setDropOff({ ...dropOff, date: e.target.value })}
+            placeholder="Select date"
           />
           <div className="vertical_line"></div>
           <input
             type="time"
             value={dropOff.time}
             onChange={(e) => setDropOff({ ...dropOff, time: e.target.value })}
+            placeholder="Select time"
           />
         </div>
       </div>

@@ -1,4 +1,3 @@
-/* RentalOptions.css */
 .rental-options {
     display: flex;
     justify-content: space-between;
@@ -28,20 +27,32 @@
     justify-content: space-between;
   }
   
+  /* Reset default styles for select and input elements */
   .fields select,
   .fields input[type="date"],
   .fields input[type="time"] {
-    width: 30%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    border: none;
+    /* border: 1px solid #ccc; */
     padding: 12px;
     border-radius: 5px;
     font-size: 14px;
-    border: none;
-    outline: none;
-    /* background-color: #f7f7f7; */
     color: #333;
+    width: 30%;
+    outline: none;
+    cursor: pointer;
   }
-
-  .vertical_line{
+  
+  .fields select:focus,
+  .fields input[type="date"]:focus,
+  .fields input[type="time"]:focus {
+    border-color: #2a73ef;
+  }
+  
+  .vertical_line {
     width: 1px;
     background-color: #C3D4E9;
   }
@@ -61,7 +72,7 @@
   }
   
   /* Responsive styles */
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .rental-options {
       flex-direction: column;
     }
@@ -74,12 +85,28 @@
     .fields select,
     .fields input[type="date"],
     .fields input[type="time"] {
-      width: 100%;
       margin-bottom: 10px;
     }
   
+    .rental-options {
+      position: relative;
+    }
+  
     .swap-icon {
-      display: none; /* Hide the swap icon on smaller screens */
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .fields select,
+    .fields input[type="date"],
+    .fields input[type="time"] {
+      width: 28%;
+      padding: 0;
     }
   }
   

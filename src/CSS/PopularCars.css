@@ -10,34 +10,47 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 30px;
   }
   
   .car-list .car-card {
-    flex: 1 1 calc(25% - 32px); /* 4 cards per row */
+    flex: 1 1 23%; /* 4 cards per row, including gaps */
+    max-width: 25%; /* Ensure it doesn't exceed this width */
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
   }
-  
+
+  @media (max-width: 1250px) {
+    .car-list .car-card {
+        flex: 1 1 30%;
+        max-width: 30%;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    
+  }
   
   /* Adjustments for responsiveness */
   @media (max-width: 1024px) {
     .car-list .car-card {
-      flex: 1 1 calc(33.33% - 32px); /* 3 cards per row */
+      flex: 1 1 48%; /* 3 cards per row, including gaps */
+      max-width: 48% !important;
     }
-  }
-  
-  @media (max-width: 768px) {
-    .car-list .car-card {
-      flex: 1 1 calc(50% - 32px); /* 2 cards per row */
+
+    .car-list{
+        gap: 0;
     }
   }
   
   @media (max-width: 480px) {
     .car-list .car-card {
       flex: 1 1 100%; /* 1 card per row */
+      max-width: 100%;
     }
   }
   

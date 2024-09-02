@@ -16,7 +16,7 @@ import { Pagination } from 'swiper/modules';
 const PopularCars = () => {
   const [popularCars, setPopularCars] = useState([]);
   const [recommendationCars, setRecommendationCars] = useState([]);
-  const isMobile = useIsMobile(768); // Set your mobile breakpoint here
+  const isMobile = useIsMobile(550); // Set your mobile breakpoint here
 
   useEffect(() => {
     fetch('/json/cars.json')

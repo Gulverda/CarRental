@@ -5,6 +5,7 @@ import Banner from './components/Banner';
 import RentalOptions from './components/RentalOptions';
 import PopularCars from './components/PopularCars';
 import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <RentalOptions />
         <PopularCars />
       </main>
+      <Footer />
     </div>
     </div>
   );
