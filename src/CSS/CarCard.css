@@ -104,6 +104,21 @@
     gap: 4px;
     filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.5));
   }
+
+  /* src/CSS/CarCard.css */
+
+.heart-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .heart-icon:hover {
+    transform: scale(1.1);
+  }
+  
   
   /* Responsive styles */
   @media (max-width: 768px) {

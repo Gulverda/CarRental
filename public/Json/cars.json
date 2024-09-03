@@ -91,7 +91,52 @@
         "transmission": "Manual",
         "capacity": "2 People",
         "liked": false
-      }
+      },
+        {
+            "id": 5,
+            "name": "Koenigsegg",
+            "type": "Sport",
+            "price": "99.00",
+            "imgUrl": "/carAssets/Koenigsegg.png",
+            "fuel": "90L",
+            "transmission": "Manual",
+            "capacity": "2 People",
+            "liked": true
+        },
+        {
+            "id": 6,
+            "name": "Rolls - Royce",
+            "type": "Sedan",
+            "price": "96.00",
+            "imgUrl": "/carAssets/RolsRoice.png",
+            "fuel": "70L",
+            "transmission": "Manual",
+            "capacity": "4 People",
+            "liked": true
+        },
+        {
+            "id": 7,
+            "name": "Nissan GT - R",
+            "type": "Sport",
+            "price": "80.00",
+            "oldPrice": "100.00",
+            "imgUrl": "/carAssets/Gtr.png",
+            "fuel": "80L",
+            "transmission": "Manual",
+            "capacity": "2 People",
+            "liked": false
+        },
+        {
+            "id": 8,
+            "name": "All New Rush",
+            "type": "SUV",
+            "price": "72.00",
+            "imgUrl": "/carAssets/AllNewRush.png",
+            "fuel": "70L",
+            "transmission": "Manual",
+            "capacity": "4 People",
+            "liked": false
+        }
     ]
   }
   

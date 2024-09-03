@@ -66,10 +66,10 @@ const RentalOptions = () => {
       <div className="swap-icon" onClick={handleSwap}>
         <i className="icon swap">
           <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.16124 0.836324L5.16124 14.4541" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M1.0837 4.93262L5.16148 0.83595L9.23926 4.93262" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M15.089 17.167L15.089 3.54921" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M19.167 13.0713L15.0892 17.168L11.0114 13.0713" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M5.16124 0.836324L5.16124 14.4541" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M1.0837 4.93262L5.16148 0.83595L9.23926 4.93262" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M15.089 17.167L15.089 3.54921" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M19.167 13.0713L15.0892 17.168L11.0114 13.0713" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </i>
       </div>

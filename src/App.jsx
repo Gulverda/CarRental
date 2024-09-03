@@ -10,15 +10,16 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="container">
+            <Header />
       <div className="app" style={{maxWidth: "1440px", width: "100%"}}>
-      <Header />
       <main className="main-content" style={{padding: "32px 64px"}}>
         <Banner />
         <RentalOptions />
         <PopularCars />
       </main>
-      <Footer />
     </div>
+    <Footer />
+
     </div>
   );
 }
