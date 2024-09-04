@@ -1,21 +1,28 @@
-// src/components/CarCard.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 import '../CSS/CarCard.css';
 import profile from '../assets/icons/profile.svg';
 import Transmission from '../assets/icons/Car.svg';
 import GasStation from '../assets/icons/gasStation.svg';
 
-const CarCard = ({ name, type, price, oldPrice, imgUrl, fuel, transmission, capacity, initialLiked = false }) => {
-  // Manage the liked state
+const CarCard = ({ id, name, type, price, oldPrice, imgUrl, fuel, transmission, capacity, initialLiked = false }) => {
   const [liked, setLiked] = useState(initialLiked);
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   // Toggle the liked state on click
   const toggleLiked = () => {
     setLiked((prevLiked) => !prevLiked);
   };
 
+  // Handle click to navigate to the car detail page
+  const handleCardClick = () => {
+    console.log('Car ID:', id); // Add this line in the CarCard component
+
+    navigate(`/car/${id}`); // Use id directly here
+  };
+
   return (
-    <div className="car-card">
+    <div className="car-card" onClick={handleCardClick}> {/* Add onClick handler */}
       <img src={imgUrl} alt={name} />
       <div className="car-info">
         <h4>{name}</h4>
@@ -43,7 +50,10 @@ const CarCard = ({ name, type, price, oldPrice, imgUrl, fuel, transmission, capa
             <button>Rent Now</button>
           </div>
         </div>
-        <div className="heart-icon" onClick={toggleLiked}>
+        <div className="heart-icon" onClick={(e) => {
+          e.stopPropagation(); // Prevent triggering the card click
+          toggleLiked();
+        }}>
           <svg
             width="24"
             height="24"

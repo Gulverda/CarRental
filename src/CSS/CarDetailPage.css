@@ -1,0 +1,115 @@
+.car-detail-container {
+    display: flex;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .car-image-section {
+    flex: 1;
+    padding-right: 20px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .car-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .car-main-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .car-sub-images img {
+    width: 30%;
+    border-radius: 8px;
+    margin-right: 5px;
+  }
+  
+  .car-sub-images img:last-child {
+    margin-right: 0;
+  }
+  
+  .car-tagline {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  .car-description {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  .car-details-section {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .car-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .car-rating-stars {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    margin-right: 10px;
+  }
+  
+  .car-reviewer-count {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .car-details-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .car-specs p {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 5px 0;
+  }
+  
+  .car-pricing {
+    margin: 20px 0;
+  }
+  
+  .car-price {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .car-old-price {
+    font-size: 1rem;
+    color: #888;
+    text-decoration: line-through;
+  }
+  
+  .rent-now-button {
+    background-color: #3366ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .rent-now-button:hover {
+    background-color: #1a4fbb;
+  }
+  

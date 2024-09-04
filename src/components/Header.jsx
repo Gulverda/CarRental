@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from React Router
 import '../CSS/Header.css'; 
 import heart from '../assets/icons/heart.svg';
 import notification from '../assets/icons/notification.svg';
@@ -9,6 +10,7 @@ const Header = () => {
   const [results, setResults] = useState([]);
   const [allCars, setAllCars] = useState([]);
   const searchRef = useRef(null); // Reference to the search bar container
+  const navigate = useNavigate(); // Initialize the useNavigate hook
 
   // Fetch all car data once when the component mounts
   useEffect(() => {
@@ -51,6 +53,14 @@ const Header = () => {
     setResults(filteredCars); // Update the results to display
   };
 
+  // Handle click on a search result item
+  const handleResultClick = (id) => {
+    // Navigate to the car detail page using the car's id
+    navigate(`/car/${id}`);
+    setSearchTerm(''); // Clear the search term
+    setResults([]); // Clear the search results
+  };
+
   return (
     <header className="header">
       <div className="logo">MORENT</div>
@@ -64,7 +74,11 @@ const Header = () => {
         {results.length > 0 && (
           <div className="search-results">
             {results.map(result => (
-              <div key={result.id} className="search-result-item">
+              <div 
+                key={result.id} 
+                className="search-result-item" 
+                onClick={() => handleResultClick(result.id)} // Add click handler
+              >
                 <img src={result.imgUrl} alt={result.name} />
                 <div>
                   <div className="result-name">{result.name}</div>

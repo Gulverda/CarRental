@@ -48,7 +48,7 @@
     ],
     "recommendationCars": [
       {
-        "id": 1,
+        "id": 5,
         "name": "All New Rush",
         "type": "SUV",
         "price": "72.00",
@@ -59,7 +59,7 @@
         "liked": false
       },
       {
-        "id": 2,
+        "id": 6,
         "name": "CR - V",
         "type": "SUV",
         "price": "80.00",
@@ -70,7 +70,7 @@
         "liked": true
       },
       {
-        "id": 3,
+        "id": 7,
         "name": "All New Terios",
         "type": "SUV",
         "price": "74.00",
@@ -81,7 +81,7 @@
         "liked": false
       },
       {
-        "id": 4,
+        "id": 8,
         "name": "Nissan GT - R",
         "type": "Sport",
         "price": "80.00",
@@ -93,7 +93,7 @@
         "liked": false
       },
         {
-            "id": 5,
+            "id": 9,
             "name": "Koenigsegg",
             "type": "Sport",
             "price": "99.00",
@@ -104,7 +104,7 @@
             "liked": true
         },
         {
-            "id": 6,
+            "id": 10,
             "name": "Rolls - Royce",
             "type": "Sedan",
             "price": "96.00",
@@ -115,7 +115,7 @@
             "liked": true
         },
         {
-            "id": 7,
+            "id": 11,
             "name": "Nissan GT - R",
             "type": "Sport",
             "price": "80.00",
@@ -127,7 +127,7 @@
             "liked": false
         },
         {
-            "id": 8,
+            "id": 12,
             "name": "All New Rush",
             "type": "SUV",
             "price": "72.00",

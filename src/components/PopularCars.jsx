@@ -43,17 +43,20 @@ const PopularCars = () => {
     >
       {cars.map(car => (
         <SwiperSlide key={car.id}>
-          <CarCard
-            name={car.name}
-            type={car.type}
-            price={car.price}
-            oldPrice={car.oldPrice}
-            imgUrl={car.imgUrl}
-            fuel={car.fuel}
-            transmission={car.transmission}
-            capacity={car.capacity}
-            liked={car.liked}
-          />
+           <CarCard 
+          key={car.id} 
+          id={car.id} 
+          name={car.name} 
+          type={car.type} 
+          price={car.price} 
+          oldPrice={car.oldPrice}
+          imgUrl={car.imgUrl}
+          fuel={car.fuel}
+          transmission={car.transmission}
+          capacity={car.capacity}
+          initialLiked={car.liked}
+        />
+
         </SwiperSlide>
       ))}
     </Swiper>
@@ -62,18 +65,20 @@ const PopularCars = () => {
   const renderCarList = (cars) => (
     <div className="car-list">
       {cars.map(car => (
-        <CarCard
-          key={car.id}
-          name={car.name}
-          type={car.type}
-          price={car.price}
-          oldPrice={car.oldPrice}
-          imgUrl={car.imgUrl}
-          fuel={car.fuel}
-          transmission={car.transmission}
-          capacity={car.capacity}
-          liked={car.liked}
-        />
+                <CarCard 
+                key={car.id} 
+                id={car.id} 
+                name={car.name} 
+                type={car.type} 
+                price={car.price} 
+                oldPrice={car.oldPrice}
+                imgUrl={car.imgUrl}
+                fuel={car.fuel}
+                transmission={car.transmission}
+                capacity={car.capacity}
+                initialLiked={car.liked}
+              />
+      
       ))}
     </div>
   );
