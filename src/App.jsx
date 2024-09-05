@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Banner from './components/Banner';
 import RentalOptions from './components/RentalOptions';
 import PopularCars from './components/PopularCars';
+import RecommendationCars from './components/RecommendationCars';
 import Footer from './components/Footer';
 import CarDetailPage from './pages/CarDetailPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -32,6 +33,7 @@ function App() {
                     <Banner />
                     <RentalOptions />
                     <PopularCars carsData={carsData} />
+                    <RecommendationCars carsData={carsData} />
                   </>
                 } 
               />

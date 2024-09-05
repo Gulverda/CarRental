@@ -9,13 +9,7 @@ import { Pagination } from 'swiper/modules';
 
 const PopularCars = () => {
   const [popularCars, setPopularCars] = useState([]);
-  const [recommendationCars, setRecommendationCars] = useState([]);
-  const [displayedRecommendations, setDisplayedRecommendations] = useState([]);
-  const [recommendationIndex, setRecommendationIndex] = useState(0);
   const isMobile = useIsMobile(550); // Set your mobile breakpoint here
-
-  // Set the number of cars to display initially and on each load
-  const CARS_TO_LOAD = 4;
 
   useEffect(() => {
     fetch('/json/cars.json')
@@ -27,9 +21,6 @@ const PopularCars = () => {
       })
       .then(data => {
         setPopularCars(data.popularCars || []);
-        setRecommendationCars(data.recommendationCars || []);
-        setDisplayedRecommendations(data.recommendationCars.slice(0, CARS_TO_LOAD) || []);
-        setRecommendationIndex(CARS_TO_LOAD);
       })
       .catch(error => console.error('Error fetching car data:', error));
   }, []);
@@ -83,29 +74,11 @@ const PopularCars = () => {
     </div>
   );
 
-  const handleLoadMore = () => {
-    const nextIndex = recommendationIndex + CARS_TO_LOAD;
-    setDisplayedRecommendations(recommendationCars.slice(0, nextIndex));
-    setRecommendationIndex(nextIndex);
-  };
-
   return (
     <div className="cars-container">
       <div className="popular-cars">
         <h3>Popular Cars</h3>
         {isMobile ? renderSwiper(popularCars) : renderCarList(popularCars)}
-      </div>
-
-      <div className="recommendation-cars">
-        <h3>Recommended Cars</h3>
-        {renderCarList(displayedRecommendations)}
-        {recommendationIndex < recommendationCars.length && (
-          <div className="for_load_more_button">
-            <button className="load-more-button" onClick={handleLoadMore}>
-              Show More Cars
-            </button>
-          </div>
-        )}
       </div>
     </div>
   );

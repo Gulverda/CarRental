@@ -25,7 +25,6 @@
   .for_load_more_button{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
   }
 
   .for_load_more_button button
