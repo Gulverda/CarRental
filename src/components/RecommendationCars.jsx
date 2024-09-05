@@ -11,7 +11,7 @@ const RecommendationCars = () => {
   const CARS_TO_LOAD = 4;
 
   useEffect(() => {
-    fetch('/json/cars.json')
+    fetch('/Json/cars.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

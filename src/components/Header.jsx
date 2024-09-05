@@ -14,7 +14,7 @@ const Header = () => {
 
   // Fetch all car data once when the component mounts
   useEffect(() => {
-    fetch('/json/cars.json')
+    fetch('/Json/cars.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

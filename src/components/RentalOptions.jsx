@@ -18,7 +18,7 @@ const RentalOptions = () => {
 
   useEffect(() => {
     // Fetch city data from the JSON file
-    fetch('/json/cities.json')
+    fetch('/Json/cities.json')
       .then(response => response.json())
       .then(data => setCities(data))
       .catch(error => console.error('Error fetching cities:', error));
