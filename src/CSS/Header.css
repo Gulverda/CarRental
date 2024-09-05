@@ -85,11 +85,11 @@
     height: 24px;
     object-fit: contain;
   }
-  
+
   /* Responsive styles */
   @media (max-width: 768px) {
     .header {
-      padding: 24px 24px 0;
+      padding: 24px 24px;
     }
     
     .search-bar {
@@ -119,6 +119,7 @@
   
     .user-options {
       margin-top: 10px;
+      display: none;
     }
   }
   

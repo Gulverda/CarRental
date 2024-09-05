@@ -290,7 +290,8 @@
     }
 
     .car-sub-images .car_sub img {
-      height: 80px;
+      /* height: 80px; */
+      height: 100%;
     }
     
   }

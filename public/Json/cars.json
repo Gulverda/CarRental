@@ -6,9 +6,9 @@
       "type": "Sport",
       "price": "99.00",
       "imgUrl": "/carAssets/Koenigsegg.png",
-      "subImage1": "/carAssets/Koenigsegg.png",
-      "subImage2": "/carAssets/Koenigsegg.png",
-      "subImage3": "/carAssets/Gtr.png",
+      "subImage1": "/carAssets/Koenigseggnismo.png",
+      "subImage2": "/carAssets/Koeinterior.jpg",
+      "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "90L",
       "transmission": "Manual",
       "capacity": "2 People",
@@ -38,6 +38,9 @@
       "price": "80.00",
       "oldPrice": "100.00",
       "imgUrl": "/carAssets/Gtr.png",
+      "subImage1": "/carAssets/Koenigseggnismo.png",
+      "subImage2": "/carAssets/Koeinterior.jpg",
+      "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "80L",
       "transmission": "Manual",
       "capacity": "2 People",
@@ -61,6 +64,9 @@
       "type": "Sedan",
       "price": "96.00",
       "imgUrl": "/carAssets/RolsRoice.png",
+      "subImage1": "/carAssets/Koenigseggnismo.png",
+      "subImage2": "/carAssets/Koeinterior.jpg",
+      "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "70L",
       "transmission": "Manual",
       "capacity": "4 People",
@@ -84,6 +90,9 @@
       "type": "SUV",
       "price": "72.00",
       "imgUrl": "/carAssets/AllNewRush.png",
+      "subImage1": "/carAssets/Koenigseggnismo.png",
+      "subImage2": "/carAssets/Koeinterior.jpg",
+      "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "70L",
       "transmission": "Manual",
       "capacity": "4 People",
@@ -109,6 +118,9 @@
       "type": "SUV",
       "price": "72.00",
       "imgUrl": "/carAssets/AllNewRush.png",
+      "subImage1": "/carAssets/Koenigseggnismo.png",
+      "subImage2": "/carAssets/Koeinterior.jpg",
+      "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "70L",
       "transmission": "Manual",
       "capacity": "4 People",
@@ -132,6 +144,9 @@
       "type": "SUV",
       "price": "80.00",
       "imgUrl": "/carAssets/CRV.png",
+      "subImage1": "/carAssets/Koenigseggnismo.png",
+      "subImage2": "/carAssets/Koeinterior.jpg",
+      "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "80L",
       "transmission": "Manual",
       "capacity": "6 People",
@@ -155,6 +170,9 @@
       "type": "SUV",
       "price": "74.00",
       "imgUrl": "/carAssets/AllNewTerios.png",
+      "subImage1": "/carAssets/Koenigseggnismo.png",
+      "subImage2": "/carAssets/Koeinterior.jpg",
+      "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "90L",
       "transmission": "Manual",
       "capacity": "6 People",
@@ -179,6 +197,9 @@
       "price": "80.00",
       "oldPrice": "100.00",
       "imgUrl": "/carAssets/Gtr.png",
+      "subImage1": "/carAssets/Koenigseggnismo.png",
+      "subImage2": "/carAssets/Koeinterior.jpg",
+      "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "80L",
       "transmission": "Manual",
       "capacity": "2 People",
@@ -203,10 +224,30 @@
         "type": "Sport",
         "price": "99.00",
         "imgUrl": "/carAssets/Koenigsegg.png",
+        "subImage1": "/carAssets/Koenigseggnismo.png",
+        "subImage2": "/carAssets/Koeinterior.jpg",
+        "subImage3": "/carAssets/koeinterior1.jpg",
         "fuel": "90L",
         "transmission": "Manual",
         "capacity": "2 People",
-        "liked": true
+        "liked": true,
+        "testimonials": [
+          {
+            "author": "John Doe",
+            "rating": 5,
+            "comment": "The Koenigsegg is a masterpiece! The performance and design are unmatched."
+          },
+          {
+            "author": "Jane Smith",
+            "rating": 4.5,
+            "comment": "Incredible power and speed, but the fuel consumption is a bit high."
+          },
+          {
+            "author": "Robert Johnson",
+            "rating": 4.7,
+            "comment": "A true supercar that delivers an unforgettable driving experience."
+          }
+        ]
     },
     {
         "id": 10,
@@ -214,10 +255,20 @@
         "type": "Sedan",
         "price": "96.00",
         "imgUrl": "/carAssets/RolsRoice.png",
+        "subImage1": "/carAssets/Koenigseggnismo.png",
+      "subImage2": "/carAssets/Koeinterior.jpg",
+      "subImage3": "/carAssets/koeinterior1.jpg",
         "fuel": "70L",
         "transmission": "Manual",
         "capacity": "4 People",
-        "liked": true
+        "liked": true,
+        "testimonials": [
+          {
+            "author": "Michael Brown",
+            "rating": 5,
+            "comment": "Pure luxury on wheels. The comfort and craftsmanship are second to none."
+          }
+        ]
     },
     {
         "id": 11,
@@ -226,10 +277,25 @@
         "price": "80.00",
         "oldPrice": "100.00",
         "imgUrl": "/carAssets/Gtr.png",
+        "subImage1": "/carAssets/Koenigseggnismo.png",
+      "subImage2": "/carAssets/Koeinterior.jpg",
+      "subImage3": "/carAssets/koeinterior1.jpg",
         "fuel": "80L",
         "transmission": "Manual",
         "capacity": "2 People",
-        "liked": false
+        "liked": false,
+        "testimonials": [
+          {
+            "author": "Alex Johnson",
+            "rating": 4.8,
+            "comment": "The GT-R provides a thrilling driving experience at a reasonable price!"
+          },
+          {
+            "author": "Emily Davis",
+            "rating": 4.2,
+            "comment": "Great car for sports enthusiasts, but the suspension is a bit stiff for daily use."
+          }
+        ]
     },
     {
         "id": 12,
@@ -237,10 +303,15 @@
         "type": "SUV",
         "price": "72.00",
         "imgUrl": "/carAssets/AllNewRush.png",
+        "subImage1": "/carAssets/Koenigseggnismo.png",
+      "subImage2": "/carAssets/Koeinterior.jpg",
+      "subImage3": "/carAssets/koeinterior1.jpg",
         "fuel": "70L",
         "transmission": "Manual",
         "capacity": "4 People",
-        "liked": false
+        "liked": false,
+        "testimonials": [
+        ]
     }
   ]
 }

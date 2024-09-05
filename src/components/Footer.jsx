@@ -1,12 +1,20 @@
 import React from 'react';
 import '../CSS/Footer.css';
+import { useNavigate } from 'react-router-dom';
+
 
 const Footer = () => {
+    const navigate = useNavigate(); // Initialize the useNavigate hook
+
+const handleLogoClick = () => {
+    navigate('/'); // Navigate to the main page
+  };
+  
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-left">
-          <h2>MORENT</h2>
+      <div className="logo" onClick={handleLogoClick}>MORENT</div>
           <p>Our vision is to provide convenience and help increase your sales business.</p>
         </div>
         <div className="footer-links">

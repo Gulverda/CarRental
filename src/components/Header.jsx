@@ -61,9 +61,14 @@ const Header = () => {
     setResults([]); // Clear the search results
   };
 
+  // Handle logo click to navigate to the home page
+  const handleLogoClick = () => {
+    navigate('/'); // Navigate to the main page
+  };
+
   return (
     <header className="header">
-      <div className="logo">MORENT</div>
+      <div className="logo" onClick={handleLogoClick}>MORENT</div>
       <div className="search-bar" ref={searchRef}>
         <input 
           type="text" 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../CSS/CarDetailPage.css';
 import RecommendationCars from '../components/RecommendationCars';
@@ -9,8 +9,15 @@ const CarDetailPage = ({ carsData }) => {
   const allCars = [...carsData.popularCars, ...carsData.recommendationCars];
   const car = allCars.find(car => car.id === parseInt(id));
 
-  const [mainImage, setMainImage] = useState(car ? car.imgUrl : '');
+  const [mainImage, setMainImage] = useState('');
   const [showAllReviews, setShowAllReviews] = useState(false); // State to track if all reviews should be shown
+
+  // Update the mainImage only when the car data is available
+  useEffect(() => {
+    if (car) {
+      setMainImage(car.imgUrl);
+    }
+  }, [car]);
 
   if (!car) {
     return <div className="not-found">Car not found</div>;
