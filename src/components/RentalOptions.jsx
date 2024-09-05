@@ -39,7 +39,7 @@ const RentalOptions = () => {
             value={pickUp.city}
             onChange={(e) => setPickUp({ ...pickUp, city: e.target.value })}
           >
-            <option value="" disabled>Select your city</option>
+            <option value="" disabled>City</option>
             {cities.map(city => (
               <option key={city.id} value={city.name}>
                 {city.name}
@@ -81,7 +81,7 @@ const RentalOptions = () => {
             value={dropOff.city}
             onChange={(e) => setDropOff({ ...dropOff, city: e.target.value })}
           >
-            <option value="" disabled>Select your city</option>
+            <option value="" disabled>City</option>
             {cities.map(city => (
               <option key={city.id} value={city.name}>
                 {city.name}

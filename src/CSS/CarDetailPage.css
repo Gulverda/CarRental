@@ -1,12 +1,8 @@
 .car-detail-container {
     display: flex;
     justify-content: space-between;
-    /* background-color: #f9f9f9; */
-    padding: 20px;
     border-radius: 12px;
-    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
-    /* max-width: 800px;
-    margin: 20px auto; */
+    margin: 20px auto; 
   }
 
   .car-details-section{
@@ -171,6 +167,108 @@
   .rent-now-button:hover {
     background-color: #1a4fbb;
   }
+
+  .car-testimonials-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .reviews-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .reviews-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .reviews-count {
+    background-color: #456ff6;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
+  .testimonial-item {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .testimonial-avatar img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .testimonial-content {
+    flex-grow: 1;
+  }
+  
+  .testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .testimonial-info h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .testimonial-info p {
+    margin: 0;
+    color: #757575;
+    font-size: 0.9rem;
+  }
+  
+  .testimonial-date {
+    display: flex;
+    align-items: center;
+    color: #757575;
+  }
+  
+  .testimonial-date span {
+    margin-right: 10px;
+  }
+  
+  .testimonial-rating {
+    color: #ffbb00;
+  }
+  
+  .testimonial-comment {
+    margin-top: 10px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .show-all-reviews {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .show-all-reviews button {
+    background-color: transparent;
+    border: none;
+    color: #456ff6;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .show-all-reviews button:hover {
+    text-decoration: underline;
+  }
+  
   
 
   @media screen and (max-width: 768px) {
@@ -223,5 +321,11 @@
 
     .car-detail-container{
         padding: 0;
+    }
+
+    .testimonial-comment,
+    .testimonial-rating,
+    .testimonial-date span {
+        font-size: 12px;
     }
   }

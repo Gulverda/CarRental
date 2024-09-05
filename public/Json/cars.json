@@ -1,33 +1,215 @@
 {
-    "popularCars": [
-      {
-        "id": 1,
+  "popularCars": [
+    {
+      "id": 1,
+      "name": "Koenigsegg",
+      "type": "Sport",
+      "price": "99.00",
+      "imgUrl": "/carAssets/Koenigsegg.png",
+      "subImage1": "/carAssets/Koenigsegg.png",
+      "subImage2": "/carAssets/Koenigsegg.png",
+      "subImage3": "/carAssets/Gtr.png",
+      "fuel": "90L",
+      "transmission": "Manual",
+      "capacity": "2 People",
+      "liked": true,
+      "testimonials": [
+        {
+          "author": "John Doe",
+          "rating": 5,
+          "comment": "The Koenigsegg is a masterpiece! The performance and design are unmatched."
+        },
+        {
+          "author": "Jane Smith",
+          "rating": 4.5,
+          "comment": "Incredible power and speed, but the fuel consumption is a bit high."
+        },
+        {
+          "author": "Robert Johnson",
+          "rating": 4.7,
+          "comment": "A true supercar that delivers an unforgettable driving experience."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Nissan GT - R",
+      "type": "Sport",
+      "price": "80.00",
+      "oldPrice": "100.00",
+      "imgUrl": "/carAssets/Gtr.png",
+      "fuel": "80L",
+      "transmission": "Manual",
+      "capacity": "2 People",
+      "liked": false,
+      "testimonials": [
+        {
+          "author": "Alex Johnson",
+          "rating": 4.8,
+          "comment": "The GT-R provides a thrilling driving experience at a reasonable price!"
+        },
+        {
+          "author": "Emily Davis",
+          "rating": 4.2,
+          "comment": "Great car for sports enthusiasts, but the suspension is a bit stiff for daily use."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Rolls - Royce",
+      "type": "Sedan",
+      "price": "96.00",
+      "imgUrl": "/carAssets/RolsRoice.png",
+      "fuel": "70L",
+      "transmission": "Manual",
+      "capacity": "4 People",
+      "liked": true,
+      "testimonials": [
+        {
+          "author": "Michael Brown",
+          "rating": 5,
+          "comment": "Pure luxury on wheels. The comfort and craftsmanship are second to none."
+        },
+        {
+          "author": "Sarah Wilson",
+          "rating": 4.7,
+          "comment": "A magnificent sedan, perfect for long trips with family."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "All New Rush",
+      "type": "SUV",
+      "price": "72.00",
+      "imgUrl": "/carAssets/AllNewRush.png",
+      "fuel": "70L",
+      "transmission": "Manual",
+      "capacity": "4 People",
+      "liked": false,
+      "testimonials": [
+        {
+          "author": "David Miller",
+          "rating": 4.5,
+          "comment": "Excellent SUV for family trips. Spacious and fuel-efficient."
+        },
+        {
+          "author": "Linda Green",
+          "rating": 4.3,
+          "comment": "Good value for the price, but lacks some modern features."
+        }
+      ]
+    }
+  ],
+  "recommendationCars": [
+    {
+      "id": 5,
+      "name": "All New Rush",
+      "type": "SUV",
+      "price": "72.00",
+      "imgUrl": "/carAssets/AllNewRush.png",
+      "fuel": "70L",
+      "transmission": "Manual",
+      "capacity": "4 People",
+      "liked": false,
+      "testimonials": [
+        {
+          "author": "David Miller",
+          "rating": 4.5,
+          "comment": "Excellent SUV for family trips. Spacious and fuel-efficient."
+        },
+        {
+          "author": "Linda Green",
+          "rating": 4.3,
+          "comment": "Good value for the price, but lacks some modern features."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "CR - V",
+      "type": "SUV",
+      "price": "80.00",
+      "imgUrl": "/carAssets/CRV.png",
+      "fuel": "80L",
+      "transmission": "Manual",
+      "capacity": "6 People",
+      "liked": true,
+      "testimonials": [
+        {
+          "author": "Matthew Turner",
+          "rating": 4.8,
+          "comment": "Great handling, comfortable ride, and plenty of space for passengers."
+        },
+        {
+          "author": "Olivia Harris",
+          "rating": 4.6,
+          "comment": "A solid SUV, but I wish it had better fuel economy."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "All New Terios",
+      "type": "SUV",
+      "price": "74.00",
+      "imgUrl": "/carAssets/AllNewTerios.png",
+      "fuel": "90L",
+      "transmission": "Manual",
+      "capacity": "6 People",
+      "liked": false,
+      "testimonials": [
+        {
+          "author": "Sophia Clark",
+          "rating": 4.7,
+          "comment": "A reliable and spacious SUV, perfect for larger families."
+        },
+        {
+          "author": "James Wright",
+          "rating": 4.4,
+          "comment": "Decent SUV, but there are better options at this price point."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Nissan GT - R",
+      "type": "Sport",
+      "price": "80.00",
+      "oldPrice": "100.00",
+      "imgUrl": "/carAssets/Gtr.png",
+      "fuel": "80L",
+      "transmission": "Manual",
+      "capacity": "2 People",
+      "liked": false,
+      "testimonials": [
+        {
+          "author": "Alex Johnson",
+          "rating": 4.8,
+          "comment": "The GT-R provides a thrilling driving experience at a reasonable price!"
+        },
+        {
+          "author": "Emily Davis",
+          "rating": 4.2,
+          "comment": "Great car for sports enthusiasts, but the suspension is a bit stiff for daily use."
+        }
+      ]
+    },
+    
+    {
+        "id": 9,
         "name": "Koenigsegg",
         "type": "Sport",
         "price": "99.00",
         "imgUrl": "/carAssets/Koenigsegg.png",
-        "subImage1": "/carAssets/Koenigsegg.png",
-        "subImage2": "/carAssets/Koenigsegg.png",
-        "subImage3": "/carAssets/Gtr.png",
         "fuel": "90L",
         "transmission": "Manual",
         "capacity": "2 People",
         "liked": true
-      },
-      {
-        "id": 2,
-        "name": "Nissan GT - R",
-        "type": "Sport",
-        "price": "80.00",
-        "oldPrice": "100.00",
-        "imgUrl": "/carAssets/Gtr.png",
-        "fuel": "80L",
-        "transmission": "Manual",
-        "capacity": "2 People",
-        "liked": false
-      },
-      {
-        "id": 3,
+    },
+    {
+        "id": 10,
         "name": "Rolls - Royce",
         "type": "Sedan",
         "price": "96.00",
@@ -36,55 +218,9 @@
         "transmission": "Manual",
         "capacity": "4 People",
         "liked": true
-      },
-      {
-        "id": 4,
-        "name": "All New Rush",
-        "type": "SUV",
-        "price": "72.00",
-        "imgUrl": "/carAssets/AllNewRush.png",
-        "fuel": "70L",
-        "transmission": "Manual",
-        "capacity": "4 People",
-        "liked": false
-      }
-    ],
-    "recommendationCars": [
-      {
-        "id": 5,
-        "name": "All New Rush",
-        "type": "SUV",
-        "price": "72.00",
-        "imgUrl": "/carAssets/AllNewRush.png",
-        "fuel": "70L",
-        "transmission": "Manual",
-        "capacity": "4 People",
-        "liked": false
-      },
-      {
-        "id": 6,
-        "name": "CR - V",
-        "type": "SUV",
-        "price": "80.00",
-        "imgUrl": "/carAssets/CRV.png",
-        "fuel": "80L",
-        "transmission": "Manual",
-        "capacity": "6 People",
-        "liked": true
-      },
-      {
-        "id": 7,
-        "name": "All New Terios",
-        "type": "SUV",
-        "price": "74.00",
-        "imgUrl": "/carAssets/AllNewTerios.png",
-        "fuel": "90L",
-        "transmission": "Manual",
-        "capacity": "6 People",
-        "liked": false
-      },
-      {
-        "id": 8,
+    },
+    {
+        "id": 11,
         "name": "Nissan GT - R",
         "type": "Sport",
         "price": "80.00",
@@ -94,52 +230,17 @@
         "transmission": "Manual",
         "capacity": "2 People",
         "liked": false
-      },
-        {
-            "id": 9,
-            "name": "Koenigsegg",
-            "type": "Sport",
-            "price": "99.00",
-            "imgUrl": "/carAssets/Koenigsegg.png",
-            "fuel": "90L",
-            "transmission": "Manual",
-            "capacity": "2 People",
-            "liked": true
-        },
-        {
-            "id": 10,
-            "name": "Rolls - Royce",
-            "type": "Sedan",
-            "price": "96.00",
-            "imgUrl": "/carAssets/RolsRoice.png",
-            "fuel": "70L",
-            "transmission": "Manual",
-            "capacity": "4 People",
-            "liked": true
-        },
-        {
-            "id": 11,
-            "name": "Nissan GT - R",
-            "type": "Sport",
-            "price": "80.00",
-            "oldPrice": "100.00",
-            "imgUrl": "/carAssets/Gtr.png",
-            "fuel": "80L",
-            "transmission": "Manual",
-            "capacity": "2 People",
-            "liked": false
-        },
-        {
-            "id": 12,
-            "name": "All New Rush",
-            "type": "SUV",
-            "price": "72.00",
-            "imgUrl": "/carAssets/AllNewRush.png",
-            "fuel": "70L",
-            "transmission": "Manual",
-            "capacity": "4 People",
-            "liked": false
-        }
-    ]
-  }
-  
+    },
+    {
+        "id": 12,
+        "name": "All New Rush",
+        "type": "SUV",
+        "price": "72.00",
+        "imgUrl": "/carAssets/AllNewRush.png",
+        "fuel": "70L",
+        "transmission": "Manual",
+        "capacity": "4 People",
+        "liked": false
+    }
+  ]
+}
