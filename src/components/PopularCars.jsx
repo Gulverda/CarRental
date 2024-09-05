@@ -12,7 +12,7 @@ const PopularCars = () => {
   const isMobile = useIsMobile(550); // Set your mobile breakpoint here
 
   useEffect(() => {
-    fetch('/json/cars.json')
+    fetch('../../json/cars.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
