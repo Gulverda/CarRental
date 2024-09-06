@@ -40,6 +40,7 @@ const RecommendationCars = () => {
                 fuel={car.fuel}
                 transmission={car.transmission}
                 capacity={car.capacity}
+                rating={car.rating || 2} // Ensure rating is passed
                 initialLiked={car.liked}
               />
       

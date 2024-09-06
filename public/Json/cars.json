@@ -12,6 +12,7 @@
       "fuel": "90L",
       "transmission": "Manual",
       "capacity": "2 People",
+      "rating": 5,
       "liked": true,
       "testimonials": [
         {
@@ -45,6 +46,7 @@
       "transmission": "Manual",
       "capacity": "2 People",
       "liked": false,
+      "rating": 4.8,
       "testimonials": [
         {
           "author": "Alex Johnson",
@@ -70,6 +72,7 @@
       "fuel": "70L",
       "transmission": "Manual",
       "capacity": "4 People",
+      "rating": 4.7,
       "liked": true,
       "testimonials": [
         {
@@ -96,6 +99,7 @@
       "fuel": "70L",
       "transmission": "Manual",
       "capacity": "4 People",
+      "rating": 4.3,
       "liked": false,
       "testimonials": [
         {
@@ -124,6 +128,7 @@
       "fuel": "70L",
       "transmission": "Manual",
       "capacity": "4 People",
+      "rating": 4.5,
       "liked": false,
       "testimonials": [
         {
@@ -150,6 +155,7 @@
       "fuel": "80L",
       "transmission": "Manual",
       "capacity": "6 People",
+      "rating": 4.3,
       "liked": true,
       "testimonials": [
         {
@@ -176,6 +182,7 @@
       "fuel": "90L",
       "transmission": "Manual",
       "capacity": "6 People",
+      "rating": 4.4,
       "liked": false,
       "testimonials": [
         {
@@ -203,6 +210,7 @@
       "fuel": "80L",
       "transmission": "Manual",
       "capacity": "2 People",
+      "rating": 4.5,
       "liked": false,
       "testimonials": [
         {
@@ -230,6 +238,7 @@
         "fuel": "90L",
         "transmission": "Manual",
         "capacity": "2 People",
+        "rating": 5,
         "liked": true,
         "testimonials": [
           {
@@ -262,6 +271,7 @@
         "transmission": "Manual",
         "capacity": "4 People",
         "liked": true,
+        "rating": 4.7,
         "testimonials": [
           {
             "author": "Michael Brown",
@@ -283,6 +293,7 @@
         "fuel": "80L",
         "transmission": "Manual",
         "capacity": "2 People",
+        "rating": 3,
         "liked": false,
         "testimonials": [
           {
@@ -309,6 +320,7 @@
         "fuel": "70L",
         "transmission": "Manual",
         "capacity": "4 People",
+        "rating": 4,
         "liked": false,
         "testimonials": [
         ]

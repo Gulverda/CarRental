@@ -1,0 +1,204 @@
+.rent-form-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .summary_description{
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #90A3BF;
+    max-width: 440px;
+  }
+
+  .summary_section_title{
+    font-size: 20px;
+  }
+  
+  .form-section {
+    width: 55%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .summary-section {
+    height: 100%;
+    width: 40%;
+    max-width: 492px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .section-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .input-row div {
+    width: 48%;
+  }
+  
+  .input-row input,
+  .input-row select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #F6F7F9;
+    color: #90A3BF;
+  }
+  
+  .submit-button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .rental-summary {
+    border-radius: 8px;
+    margin-top: 32px;
+    /* padding: 10px; */
+    margin-bottom: 32px;
+    display: flex;
+    gap: 16px;
+  }
+  
+  .rental-summary img {
+    border: 1px solid #e0e0e0;
+    object-fit: contain;
+    width: 132px;
+    height: 108px;
+    padding: 8px;
+    background-color: #3563E9;
+    background-image: url('../assets/RightBG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+  }
+
+  .subtotal_tax{
+    margin-top: 32px;
+  }
+  
+  .summary-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .apply-code {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
+  
+  .apply-code input {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+  }
+  
+  .apply-code button {
+    width: 25%;
+    padding: 8px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .total-price {
+    margin-top: 32px;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #1A202C;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .total-price h2{
+    font-size: 20px;
+  }
+
+  .total-price p{
+    font-size: 14px;
+    font-weight: 300;
+    color: #90A3BF;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .rent-form-container {
+      flex-direction: column;
+    }
+    
+    .form-section, .summary-section {
+      width: 100%;
+    }
+  
+    .input-row div {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .rent-form-container {
+      padding: 10px;
+    }
+  
+    .submit-button {
+      padding: 10px;
+      font-size: 1em;
+    }
+  
+    .rental-summary img {
+      width: 100px;
+      height: 90px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rent-form-container {
+      padding: 5px;
+    }
+  
+    .form-section, .summary-section {
+      padding: 15px;
+    }
+  
+    .section-title, .summary-title {
+      font-size: 1.1em;
+    }
+  
+    .submit-button {
+      font-size: 0.9em;
+      padding: 8px;
+    }
+  
+    .total-price {
+      font-size: 1.5em;
+    }
+  }
+  

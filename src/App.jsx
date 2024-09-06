@@ -4,6 +4,7 @@ import Banner from './components/Banner';
 import RentalOptions from './components/RentalOptions';
 import PopularCars from './components/PopularCars';
 import RecommendationCars from './components/RecommendationCars';
+import CarRentPage from './pages/CarRentPage';
 import Footer from './components/Footer';
 import CarDetailPage from './pages/CarDetailPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -41,6 +42,8 @@ function App() {
                 path="/car/:id" 
                 element={<CarDetailPage carsData={carsData} />} 
               />
+                      <Route path="/rent/:id" element={<CarRentPage />} /> {/* Rent form page */}
+
             </Routes>
           </main>
         </div>

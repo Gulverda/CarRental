@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import '../CSS/CarDetailPage.css';
 import RecommendationCars from '../components/RecommendationCars';
 import ProfileImg from '../assets/Profile.png';
+import StarRating from '../components/StarRating';
 
 const CarDetailPage = ({ carsData }) => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const allCars = [...carsData.popularCars, ...carsData.recommendationCars];
   const car = allCars.find(car => car.id === parseInt(id));
 
   const [mainImage, setMainImage] = useState('');
-  const [showAllReviews, setShowAllReviews] = useState(false); // State to track if all reviews should be shown
+  const [showAllReviews, setShowAllReviews] = useState(false);
 
-  // Update the mainImage only when the car data is available
   useEffect(() => {
     if (car) {
       setMainImage(car.imgUrl);
@@ -23,17 +24,18 @@ const CarDetailPage = ({ carsData }) => {
     return <div className="not-found">Car not found</div>;
   }
 
-  // Function to change the main image
   const handleSubImageClick = (imageUrl) => {
     setMainImage(imageUrl);
   };
 
-  // Function to toggle between showing 2 reviews and all reviews
   const toggleShowAllReviews = () => {
     setShowAllReviews(!showAllReviews);
   };
 
-  // Determine how many reviews to show based on `showAllReviews` state
+  const handleRentNowClick = () => {
+    navigate(`/rent/${id}`, { state: { car } });
+  };
+
   const displayedTestimonials = showAllReviews ? car.testimonials : car.testimonials.slice(0, 2);
 
   return (
@@ -45,37 +47,25 @@ const CarDetailPage = ({ carsData }) => {
               <img src={mainImage} alt={car.name} className="car-main-image" />
             </div>
             <div className="car-sub-images">
-              <div className="car_sub">
-                <img
-                  src={car.subImage1}
-                  alt={`${car.name} 1`}
-                  onClick={() => handleSubImageClick(car.subImage1)}
-                />
-              </div>
-              <div className="car_sub">
-                <img
-                  src={car.subImage2}
-                  alt={`${car.name} 2`}
-                  onClick={() => handleSubImageClick(car.subImage2)}
-                />
-              </div>
-              <div className="car_sub">
-                <img
-                  src={car.subImage3}
-                  alt={`${car.name} 3`}
-                  onClick={() => handleSubImageClick(car.subImage3)}
-                />
-              </div>
+              {[car.subImage1, car.subImage2, car.subImage3].map((subImg, index) => (
+                <div className="car_sub" key={index}>
+                  <img
+                    src={subImg}
+                    alt={`${car.name} ${index + 1}`}
+                    onClick={() => handleSubImageClick(subImg)}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
+        
         <div className="car-details-section">
           <h2 className="car-title">{car.name}</h2>
-
           <div className="rating_description">
             <div className="car-rating">
-              <span className="car-rating-stars">⭐⭐⭐⭐</span>
-              <span className="car-reviewer-count">440+ Reviewer</span>
+              <StarRating rating={car.rating} /> {/* Dynamic rating here */}
+              <span className="car-reviewer-count">440+ Reviewers</span>
             </div>
             <p className="car-details-description">
               NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most unforgiving proving ground, the "race track".
@@ -90,7 +80,7 @@ const CarDetailPage = ({ carsData }) => {
           <div className="car-pricing">
             <p className="car-price">${car.price}.00/day</p>
             {car.oldPrice && <p className="car-old-price">${car.oldPrice}.00</p>}
-            <button className="rent-now-button">Rent Now</button>
+            <button className="rent-now-button" onClick={handleRentNowClick}>Rent Now</button>
           </div>
         </div>
       </div>
@@ -115,7 +105,7 @@ const CarDetailPage = ({ carsData }) => {
                     <p>{testimonial.role}</p>
                   </div>
                   <div className="testimonial-date">
-                    <span>21 July 2022</span> {/* Replace with dynamic date if available */}
+                    <span>21 July 2022</span> {/* Replace with dynamic date */}
                     <div className="testimonial-rating">{testimonial.rating}⭐</div>
                   </div>
                 </div>
@@ -127,7 +117,6 @@ const CarDetailPage = ({ carsData }) => {
           <p>No testimonials available for this car.</p>
         )}
 
-        {/* Show All Button */}
         {car.testimonials.length > 2 && (
           <div className="show-all-reviews">
             <button onClick={toggleShowAllReviews}>

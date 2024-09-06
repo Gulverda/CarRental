@@ -24,7 +24,7 @@ const PopularCars = () => {
       })
       .catch(error => console.error('Error fetching car data:', error));
   }, []);
-
+  
   const renderSwiper = (cars) => (
     <Swiper
       spaceBetween={16}
@@ -45,6 +45,7 @@ const PopularCars = () => {
           fuel={car.fuel}
           transmission={car.transmission}
           capacity={car.capacity}
+          rating={car.rating || 2} // Ensure rating is passed
           initialLiked={car.liked}
         />
 
@@ -67,6 +68,7 @@ const PopularCars = () => {
                 fuel={car.fuel}
                 transmission={car.transmission}
                 capacity={car.capacity}
+                rating={car.rating || 2} // Ensure rating is passed
                 initialLiked={car.liked}
               />
       

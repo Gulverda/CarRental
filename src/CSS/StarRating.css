@@ -1,0 +1,28 @@
+/* StarRating.css */
+.star-rating {
+    display: flex;
+    font-size: 1.5rem; /* Adjust size as needed */
+}
+
+.star {
+    color: #ccc; /* Default star color */
+}
+
+.star.filled {
+    color: gold; /* Color for fully filled stars */
+}
+
+.star.half-filled {
+    color: rgb(255, 149, 0); /* Color for half-filled stars */
+    position: relative;
+}
+
+.star.half-filled::after {
+    content: '⭐';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    color: gold;
+}
