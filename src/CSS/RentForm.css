@@ -19,8 +19,8 @@
   
   .form-section {
     width: 55%;
-    background-color: #ffffff;
-    padding: 20px;
+    /* background-color: #ffffff; */
+    /* padding: 20px; */
     border-radius: 10px;
   }
   
@@ -39,19 +39,76 @@
   .section-title {
     font-size: 1.2em;
     font-weight: 600;
-    margin-bottom: 10px;
   }
   
   .input-row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-top: 32px;
   }
+
+  .input-row div label{
+    font-size: 16px;
+    font-weight: 500;
+    color: #1A202C;
+}
   
   .input-row div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     width: 48%;
   }
+
+  .taxes,
+.subtotal{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+    }
+
+    .taxes p,
+    .subtotal p{
+        font-size: 16px;
+        font-weight: 500;
+        color: #90A3BF;
+    }
+
+    .taxes span,
+    .subtotal span{
+        font-size: 16px;
+        font-weight: 700;
+        color: #1A202C;
+    }
+
+    hr{
+        height: 2px;
+        background-color: #90A3BF;
+    }
+
+    .left_title span{
+        font-size: 14px;
+        font-weight: 300 !important;
+    }
+
+    .rental_head_title,
+    .billing_head_title,
+    .confirmation_head_title{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        width: 100%;
+        color: #1A202C;
+    }
+
+    .rental_head_title span,
+    .billing_head_title span,
+    .confirmation_head_title span{
+        font-size: 14px;
+        color: #90A3BF;
+        font-weight: 500;
+    }
   
   .input-row input,
   .input-row select {
@@ -59,20 +116,32 @@
     padding: 10px;
     border: 1px solid #dcdcdc;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 14px;
     background-color: #F6F7F9;
     color: #90A3BF;
+    outline: none;
+  }
+
+  .input-row input::placeholder,
+  .input-row select::placeholder{
+    color: #90A3BF;
+    font-size: 14px;
   }
   
   .submit-button {
-    background-color: #3498db;
+    background-color: #3563E9;
     color: white;
-    padding: 12px 20px;
+    padding: 16px 32px;
     border: none;
     border-radius: 5px;
-    font-size: 1.1em;
+    font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
     margin-top: 20px;
+  }
+
+  .submit-button:hover{
+    background-color: #3562e9cf;
   }
   
   .rental-summary {
@@ -102,29 +171,50 @@
   }
   
   .summary-title {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
+  }
+
+  .billing_info,
+  .rental_info{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 24px;
+  }
+
+  .rental_info{
+    margin-top: 32px;
   }
   
   .apply-code {
     display: flex;
     justify-content: space-between;
     margin-top: 32px;
+    position: relative;
   }
   
   .apply-code input {
-    width: 70%;
-    padding: 8px;
-    border: 1px solid #dcdcdc;
+    width: 100%;
+    padding: 16px 32px;
+    border: none;
+    background-color: #F6F7F9;
     border-radius: 5px;
+    color: #90A3BF;
+    outline: none;
+  }
+
+  .apply-code input::placeholder{
+    color: #90A3BF;
   }
   
   .apply-code button {
-    width: 25%;
-    padding: 8px;
-    background-color: #3498db;
-    color: white;
+    position: absolute;
+    right: 0;
+    padding: 16px;
+    background-color: transparent;
+    color: #1A202C;
+    font-weight: 700;
     border: none;
     border-radius: 5px;
   }
@@ -147,15 +237,59 @@
     font-weight: 300;
     color: #90A3BF;
   }
+
+  .confirmation-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.confirmation-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.confirmation-section p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.checkboxs_for_rent_form{
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-row input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox-row label {
+    font-size: 14px;
+    color: #555;
+}
+
   
   /* Responsive Styles */
   @media (max-width: 1024px) {
     .rent-form-container {
-      flex-direction: column;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 32px;
     }
     
     .form-section, .summary-section {
       width: 100%;
+      max-width: 100%;
     }
   
     .input-row div {
@@ -164,13 +298,14 @@
   }
   
   @media (max-width: 768px) {
-    .rent-form-container {
-      padding: 10px;
+    .summary-section {
+        margin-top: 32px;
     }
-  
+
     .submit-button {
       padding: 10px;
-      font-size: 1em;
+      font-size: 14px;
+      margin-bottom: 24px;
     }
   
     .rental-summary img {
@@ -182,10 +317,6 @@
   @media (max-width: 480px) {
     .rent-form-container {
       padding: 5px;
-    }
-  
-    .form-section, .summary-section {
-      padding: 15px;
     }
   
     .section-title, .summary-title {

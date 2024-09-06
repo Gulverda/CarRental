@@ -21,6 +21,9 @@ const RentForm = () => {
         time: ''
     });
 
+    const [agreeNewsletter, setAgreeNewsletter] = useState(false);
+    const [agreeTerms, setAgreeTerms] = useState(false);
+
     useEffect(() => {
         // Fetch city data from the JSON file
         fetch('/Json/cities.json')
@@ -35,12 +38,29 @@ const RentForm = () => {
         console.log('Car rating:', car.rating);
     }, [car]);
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!agreeNewsletter || !agreeTerms) {
+            alert("Please agree to the terms and conditions and newsletter.");
+            return;
+        }
+        // Continue with form submission
+        console.log("Form submitted!");
+    };
+
     return (
         <div className="rent-form-container">
             {/* Left Section - Form */}
             <div className="form-section">
                 {/* Billing Info */}
+                <div className="billing_info">
+                <div className="billing_head_title">
+                <div className="left_title">
                 <h2 className="section-title">Billing Info</h2>
+                <span>Please enter your billing info</span>
+                </div>
+                <span>1 out of 3</span>
+                </div>
                 <div className="input-row">
                     <div>
                         <label>Name</label>
@@ -61,9 +81,17 @@ const RentForm = () => {
                         <input type="text" name="city" placeholder="Town or City" />
                     </div>
                 </div>
+                </div>
 
                 {/* Rental Info */}
+                <div className="rental_info">
+                <div className="rental_head_title">
+                <div className="left_title">
                 <h2 className="section-title">Rental Info</h2>
+                <span>Please enter your payment method</span>
+                </div>
+                <span>2 out of 3</span>
+                </div>
                 <div className="input-row">
                     <div>
                         <label>Pick-Up Location</label>
@@ -129,8 +157,44 @@ const RentForm = () => {
                         />
                     </div>
                 </div>
+                </div>
 
-                <button className="submit-button" type="submit">Submit</button>
+                           {/* Confirmation Section */}
+                           <div className="confirmation-section">
+                        <div className="confirmation_head_title">
+                        <div className="left_title">
+                        <h3>Confirmation</h3>
+                        <span>We are getting to the end. Just a few clicks and your rental is ready!</span>
+                        </div>
+                        <span>2 out of 3</span>
+                        </div>
+                    <div className="checkboxs_for_rent_form">
+                    <div className="checkbox-row">
+                        <input
+                            type="checkbox"
+                            id="newsletter"
+                            checked={agreeNewsletter}
+                            onChange={() => setAgreeNewsletter(!agreeNewsletter)}
+                        />
+                        <label htmlFor="newsletter">
+                            I agree with sending marketing and newsletter emails. No spam, promised!
+                        </label>
+                    </div>
+                    <div className="checkbox-row">
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            checked={agreeTerms}
+                            onChange={() => setAgreeTerms(!agreeTerms)}
+                        />
+                        <label htmlFor="terms">
+                            I agree with our terms and conditions and privacy policy.
+                        </label>
+                    </div>
+                    </div>
+                </div>
+
+                <button className="submit-button" type="submit" onClick={handleSubmit}>Rent Now</button>
             </div>
 
             {/* Right Section - Rental Summary */}
@@ -150,8 +214,14 @@ const RentForm = () => {
                     </div>
                     <hr />
                     <div className="subtotal_tax">
-                        <p>Type: {car?.type || 'Unknown'}</p>
-                        <p>Price: ${car?.price || '0'}/day</p>
+                    <div className="subtotal">
+                        <p>SubTotal</p>
+                        <span>${car?.price || '0'}</span>
+                        </div>
+                        <div className="taxes">
+                        <p>Tax</p>
+                        <span>$0</span>
+                        </div>
                     </div>
                 </div>
                 <div className="apply-code">
