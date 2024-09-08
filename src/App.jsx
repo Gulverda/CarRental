@@ -7,6 +7,7 @@ import RecommendationCars from './components/RecommendationCars';
 import CarRentPage from './pages/CarRentPage';
 import Footer from './components/Footer';
 import CarDetailPage from './pages/CarDetailPage';
+import SearchDetails from './pages/SearchDetails/index';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
@@ -27,6 +28,7 @@ function App() {
         <div className="app" style={{ maxWidth: "1440px", width: "100%" }}>
           <main className="main-content" style={{ padding: "32px 64px" }}>
             <Routes>
+            <Route path="/search-details" element={<SearchDetails />} />
               <Route 
                 path="/" 
                 element={

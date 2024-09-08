@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate from React Router
-import '../CSS/Header.css'; 
-import heart from '../assets/icons/heart.svg';
-import notification from '../assets/icons/notification.svg';
-import settings from '../assets/icons/setting.svg';
+import '../CSS/Header.css';
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -66,6 +63,11 @@ const Header = () => {
     navigate('/'); // Navigate to the main page
   };
 
+  const handleDetailSearchClick = () => {
+    navigate('/search-details'); // Navigate to new search details page
+  };
+  
+
   return (
     <header className="header">
       <div className="logo" onClick={handleLogoClick}>MORENT</div>
@@ -94,16 +96,10 @@ const Header = () => {
           </div>
         )}
       </div>
-      <div className="user-options">
-        <i className="icon hearts">
-          <img src={heart} alt="Favorite items" />
-        </i>
-        <i className="icon settings">
-          <img src={settings} alt="Settings" />
-        </i>
-        <i className="icon notification">
-          <img src={notification} alt="Notifications" />
-        </i>
+      <div className="detail_search">
+      <button onClick={handleDetailSearchClick}>
+    Detail Search
+  </button>
       </div>
     </header>
   );
