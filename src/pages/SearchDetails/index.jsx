@@ -5,10 +5,11 @@ import CarCard from '../../components/CarCard';
 
 const SearchDetails = () => {
   const [filters, setFilters] = useState({
-    type: '',
-    capacity: '',
+    type: [],
+    capacity: [],
     priceRange: [0, 100],
   });
+
   const [allCars, setAllCars] = useState([]);
   const [filteredCars, setFilteredCars] = useState([]);
 
@@ -24,52 +25,129 @@ const SearchDetails = () => {
       .then(data => {
         // Combine popular and recommendation cars into one list
         const combinedCars = [...(data.popularCars || []), ...(data.recommendationCars || [])];
+        console.log('Car data fetched:', combinedCars); // Log the fetched car data
         setAllCars(combinedCars); // Save to state
         setFilteredCars(combinedCars); // Initially, show all cars
       })
       .catch(error => console.error('Error fetching car data:', error));
   }, []);
 
+  // Handle checkbox changes for types and capacities
+  const handleCheckboxChange = (e, filterType) => {
+    const value = e.target.value;
+    const checked = e.target.checked;
+
+    setFilters(prevFilters => {
+      const updatedFilter = checked
+        ? [...prevFilters[filterType], value] // Add to filter if checked
+        : prevFilters[filterType].filter(item => item !== value); // Remove from filter if unchecked
+
+      return { ...prevFilters, [filterType]: updatedFilter };
+    });
+  };
+
+  // Handle price range slider changes
+  const handlePriceRangeChange = (e) => {
+    setFilters(prevFilters => ({
+      ...prevFilters,
+      priceRange: [0, Number(e.target.value)]
+    }));
+  };
+
+  // Update slider background based on price range
+  const updateSliderBackground = (value) => {
+    const percentage = (value - 0) / (100 - 0) * 100;
+    return `linear-gradient(to right, #367cff ${percentage}%, #90A3BF ${percentage}%, #90A3BF 100%)`;
+  };
+
+  useEffect(() => {
+    const slider = document.querySelector('.price-range');
+    if (slider) {
+      slider.style.background = updateSliderBackground(filters.priceRange[1]);
+    }
+  }, [filters]);
+
   // Memoize the filterCars function to avoid unnecessary re-creations
   const filterCars = useCallback(() => {
     const filtered = allCars.filter(car => {
-      const matchesType = filters.type ? car.type === filters.type : true;
-      const matchesCapacity = filters.capacity ? car.capacity === parseInt(filters.capacity) : true;
+      const matchesType = filters.type.length > 0 ? filters.type.includes(car.type) : true;
+      const matchesCapacity = filters.capacity.length > 0
+        ? filters.capacity.includes(String(car.capacity)) // Convert car.capacity to string for comparison
+        : true;
       const matchesPrice = car.price <= filters.priceRange[1];
 
       return matchesType && matchesCapacity && matchesPrice;
     });
+
     setFilteredCars(filtered);
-  }, [filters, allCars]); // Include dependencies
+  }, [filters, allCars]);
 
   // Run filterCars whenever filters or allCars change
   useEffect(() => {
-    filterCars(); // Call the memoized function
-  }, [filterCars]); // Add filterCars as a dependency
+    filterCars();
+  }, [filterCars]);
 
   return (
     <div className="search-details-container">
       {/* Filter Section */}
       <div className="filter-section">
         <h3>Filters</h3>
+
+        {/* Type Filter */}
         <div className="filter-item">
           <label>Type</label>
-          <select onChange={(e) => setFilters({ ...filters, type: e.target.value })}>
-            <option value="">All</option>
-            <option value="Sport">Sport</option>
-            <option value="SUV">SUV</option>
-          </select>
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                value="Sport"
+                onChange={(e) => handleCheckboxChange(e, 'type')}
+              />
+              Sport
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="SUV"
+                onChange={(e) => handleCheckboxChange(e, 'type')}
+              />
+              SUV
+            </label>
+          </div>
         </div>
 
+        {/* Capacity Filter */}
         <div className="filter-item">
           <label>Capacity</label>
-          <select onChange={(e) => setFilters({ ...filters, capacity: e.target.value })}>
-            <option value="">Any</option>
-            <option value="2">2 People</option>
-            <option value="4">4 People</option>
-          </select>
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                value="2"
+                onChange={(e) => handleCheckboxChange(e, 'capacity')}
+              />
+              2 People
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="4"
+                onChange={(e) => handleCheckboxChange(e, 'capacity')}
+              />
+              4 People
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="6"
+                onChange={(e) => handleCheckboxChange(e, 'capacity')}
+              />
+              6 People
+            </label>
+          </div>
         </div>
 
+        {/* Price Range Filter */}
         <div className="filter-item">
           <label>Price Range</label>
           <input
@@ -77,7 +155,8 @@ const SearchDetails = () => {
             min="0"
             max="100"
             value={filters.priceRange[1]}
-            onChange={(e) => setFilters({ ...filters, priceRange: [0, e.target.value] })}
+            onChange={handlePriceRangeChange}
+            className="price-range"
           />
           <span>${filters.priceRange[1]}</span>
         </div>
@@ -98,6 +177,8 @@ const SearchDetails = () => {
                 oldPrice={car.oldPrice}
                 imgUrl={car.imgUrl}
                 fuel={car.fuel}
+                capacity={car.capacity}
+                transmission={car.transmission}
               />
             ))
           ) : (

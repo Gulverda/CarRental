@@ -11,7 +11,7 @@
       "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "90L",
       "transmission": "Manual",
-      "capacity": "2 People",
+      "capacity": "2",
       "rating": 5,
       "liked": true,
       "testimonials": [
@@ -44,7 +44,7 @@
       "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "80L",
       "transmission": "Manual",
-      "capacity": "2 People",
+      "capacity": "2",
       "liked": false,
       "rating": 4.8,
       "testimonials": [
@@ -71,7 +71,7 @@
       "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "70L",
       "transmission": "Manual",
-      "capacity": "4 People",
+      "capacity": "4",
       "rating": 4.7,
       "liked": true,
       "testimonials": [
@@ -98,7 +98,7 @@
       "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "70L",
       "transmission": "Manual",
-      "capacity": "4 People",
+      "capacity": "4",
       "rating": 4.3,
       "liked": false,
       "testimonials": [
@@ -127,7 +127,7 @@
       "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "70L",
       "transmission": "Manual",
-      "capacity": "4 People",
+      "capacity": "4",
       "rating": 4.5,
       "liked": false,
       "testimonials": [
@@ -154,7 +154,7 @@
       "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "80L",
       "transmission": "Manual",
-      "capacity": "6 People",
+      "capacity": "6",
       "rating": 4.3,
       "liked": true,
       "testimonials": [
@@ -181,7 +181,7 @@
       "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "90L",
       "transmission": "Manual",
-      "capacity": "6 People",
+      "capacity": "6",
       "rating": 4.4,
       "liked": false,
       "testimonials": [
@@ -209,7 +209,7 @@
       "subImage3": "/carAssets/koeinterior1.jpg",
       "fuel": "80L",
       "transmission": "Manual",
-      "capacity": "2 People",
+      "capacity": "2",
       "rating": 4.5,
       "liked": false,
       "testimonials": [
@@ -237,7 +237,7 @@
         "subImage3": "/carAssets/koeinterior1.jpg",
         "fuel": "90L",
         "transmission": "Manual",
-        "capacity": "2 People",
+        "capacity": "2",
         "rating": 5,
         "liked": true,
         "testimonials": [
@@ -269,7 +269,7 @@
       "subImage3": "/carAssets/koeinterior1.jpg",
         "fuel": "70L",
         "transmission": "Manual",
-        "capacity": "4 People",
+        "capacity": "4",
         "liked": true,
         "rating": 4.7,
         "testimonials": [
@@ -292,7 +292,7 @@
       "subImage3": "/carAssets/koeinterior1.jpg",
         "fuel": "80L",
         "transmission": "Manual",
-        "capacity": "2 People",
+        "capacity": "2",
         "rating": 3,
         "liked": false,
         "testimonials": [
@@ -319,7 +319,7 @@
       "subImage3": "/carAssets/koeinterior1.jpg",
         "fuel": "70L",
         "transmission": "Manual",
-        "capacity": "4 People",
+        "capacity": "4",
         "rating": 4,
         "liked": false,
         "testimonials": [
