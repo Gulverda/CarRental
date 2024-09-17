@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './SearchDetails.css';
-import '../../CSS/CarCard.css'; // Ensure this path is correct
 import CarCard from '../../components/CarCard';
 
 const SearchDetails = () => {
@@ -165,7 +164,7 @@ const SearchDetails = () => {
       {/* Search Results Section */}
       <div className="results-section">
         <h3>Search Results</h3>
-        <div className="car-list">
+        <div className="car-list for_details">
           {filteredCars.length > 0 ? (
             filteredCars.map(car => (
               <CarCard

@@ -13,6 +13,7 @@
     font-weight: bold;
     color: #007bff;
     margin-right: 15px;
+    cursor: pointer;
   }
   
   .search-bar {
@@ -84,6 +85,12 @@
     width: 24px;
     height: 24px;
     object-fit: contain;
+  }
+
+  .detail_search button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
   }
 
   /* Responsive styles */

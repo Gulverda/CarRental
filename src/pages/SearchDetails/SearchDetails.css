@@ -148,6 +148,15 @@
   transform: translateY(-5px); /* Slight lift on hover */
 }
 
+.for_details .price_button{
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.for_details .car-card button{
+  margin-top: 10px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .search-details-container {
