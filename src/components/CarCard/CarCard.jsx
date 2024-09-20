@@ -9,6 +9,7 @@ import GasStation from '../../assets/icons/gasStation.svg';
 const CarCard = ({ id, name, type, price, oldPrice, imgUrl, fuel, transmission, capacity, rating, initialLiked = false }) => {
   const [liked, setLiked] = useState(initialLiked);
   const navigate = useNavigate();
+  
 
   // Toggle the liked state on click
   const toggleLiked = (e) => {
@@ -18,12 +19,15 @@ const CarCard = ({ id, name, type, price, oldPrice, imgUrl, fuel, transmission, 
 
   // Handle click to navigate to the car detail page
   const handleCardClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     console.log('Car ID:', id);
     navigate(`/car/${id}`);
   };
 
   // Handle Rent Now click to navigate with state
   const handleRentNowClick = (e) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
     e.stopPropagation(); // Prevent triggering the card click
     navigate(`/rent/${id}`, { state :
       {car: 
