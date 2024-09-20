@@ -91,7 +91,14 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 10px;
+    border: 1px solid #888;
+    border-radius: 8px;
   }
+
+  .detail_search button:hover{
+    background-color: #fefcfc;
+}
 
   /* Responsive styles */
   @media (max-width: 768px) {
@@ -117,6 +124,14 @@
     .header {
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    .detail_search button{
+        position: absolute;
+    right: 30px;
+    top: 20px;
+    padding: 6px;
+    border: none;
     }
   
     .search-bar {

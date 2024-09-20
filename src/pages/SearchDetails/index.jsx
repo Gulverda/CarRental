@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './SearchDetails.css';
 import CarCard from '../../components/CarCard';
+import useIsMobile from '../../hooks/useIsMobile';
+
 
 const SearchDetails = () => {
   const [filters, setFilters] = useState({
@@ -11,6 +13,8 @@ const SearchDetails = () => {
 
   const [allCars, setAllCars] = useState([]);
   const [filteredCars, setFilteredCars] = useState([]);
+  const isMobile = useIsMobile(768); // Use hook to check if it's mobile (below 768px)
+
 
   // Fetch all car data when component mounts
   useEffect(() => {
@@ -86,79 +90,96 @@ const SearchDetails = () => {
     filterCars();
   }, [filterCars]);
 
+   // Toggle the filter section
+   const [isOpen, setIsOpen] = useState(false);
+
+  const toggleFilters = () =>{
+    setIsOpen(!isOpen);
+  }
+
   return (
     <div className="search-details-container">
       {/* Filter Section */}
       <div className="filter-section">
-        <h3>Filters</h3>
+      <h3 onClick={toggleFilters}>
+        Filters 
+        <span className={`arrow ${isOpen ? 'open' : ''}`}>
+        <svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M256 120.768L306.432 64 768 512l-461.568 448L256 903.232 659.072 512z" fill="#000000" /></svg>        </span>
+      </h3>
 
-        {/* Type Filter */}
-        <div className="filter-item">
-          <label>Type</label>
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                value="Sport"
-                onChange={(e) => handleCheckboxChange(e, 'type')}
-              />
-              Sport
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                value="SUV"
-                onChange={(e) => handleCheckboxChange(e, 'type')}
-              />
-              SUV
-            </label>
+      {(isOpen || !isMobile) && (
+        <>
+          {/* Type Filter */}
+          <div className="filter-item">
+            <label>Type</label>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  value="Sport"
+                  onChange={(e) => handleCheckboxChange(e, 'type')}
+                />
+                Sport
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  value="SUV"
+                  onChange={(e) => handleCheckboxChange(e, 'type')}
+                />
+                SUV
+              </label>
+            </div>
           </div>
-        </div>
 
-        {/* Capacity Filter */}
-        <div className="filter-item">
-          <label>Capacity</label>
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                value="2"
-                onChange={(e) => handleCheckboxChange(e, 'capacity')}
-              />
-              2 People
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                value="4"
-                onChange={(e) => handleCheckboxChange(e, 'capacity')}
-              />
-              4 People
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                value="6"
-                onChange={(e) => handleCheckboxChange(e, 'capacity')}
-              />
-              6 People
-            </label>
+          {/* Capacity Filter */}
+          <div className="filter-item">
+            <label>Capacity</label>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  value="2"
+                  onChange={(e) => handleCheckboxChange(e, 'capacity')}
+                />
+                2 People
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  value="4"
+                  onChange={(e) => handleCheckboxChange(e, 'capacity')}
+                />
+                4 People
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  value="6"
+                  onChange={(e) => handleCheckboxChange(e, 'capacity')}
+                />
+                6 People
+              </label>
+            </div>
           </div>
-        </div>
 
-        {/* Price Range Filter */}
-        <div className="filter-item">
-          <label>Price Range</label>
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value={filters.priceRange[1]}
-            onChange={handlePriceRangeChange}
-            className="price-range"
-          />
-          <span>${filters.priceRange[1]}</span>
-        </div>
+          {/* Price Range Filter */}
+          <div className="filter-item">
+            <label>Price Range</label>
+            <input
+              key={`price-range-${isOpen}`}               
+              type="range"
+              min="0"
+              max="100"
+              value={filters.priceRange[1]}
+              onChange={handlePriceRangeChange}
+              className="price-range"
+            />
+            <span>${filters.priceRange[1]}</span>
+          </div>
+        </>
+      )}
+
       </div>
 
       {/* Search Results Section */}
