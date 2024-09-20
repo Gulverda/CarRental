@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import '../CSS/CarDetailPage.css';
-import RecommendationCars from '../components/RecommendationCars';
-import ProfileImg from '../assets/Profile.png';
-import StarRating from '../components/StarRating';
+import './CarDetailPage.css';
+import RecommendationCars from '../../components/RecomendationCars';
+import ProfileImg from '../../assets/Profile.png';
+import StarRating from '../../components/StarRating/index';
 
 const CarDetailPage = ({ carsData }) => {
   const { id } = useParams();

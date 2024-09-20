@@ -160,7 +160,7 @@
     height: 108px;
     padding: 8px;
     background-color: #3563E9;
-    background-image: url('../assets/RightBG.png');
+    background-image: url('../../assets/RightBG.png');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;

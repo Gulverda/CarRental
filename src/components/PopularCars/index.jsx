@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import CarCard from './CarCard';
-import '../CSS/PopularCars.css';
-import useIsMobile from '../hooks/useIsMobile';
+import CarCard from '../CarCard/CarCard';
+import './PopularCars.css';
+import useIsMobile from '../../hooks/useIsMobile';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';

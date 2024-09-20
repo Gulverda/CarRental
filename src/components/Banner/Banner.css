@@ -6,7 +6,7 @@
   
   .banner-item, 
   .banner-item1 {
-    background-image: url('../assets/LeftBG.png');
+    background-image: url('../../assets/LeftBG.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #54A6FF;
@@ -20,7 +20,7 @@
 
   .banner-item1{
     background-color: #007bff;
-    background-image: url('../assets/RightBG.png') !important;
+    background-image: url('../../assets/RightBG.png') !important;
 }
   
   .banner-item h2,

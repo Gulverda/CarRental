@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import CarCard from './CarCard';
-import '../CSS/PopularCars.css';
+import CarCard from '../CarCard/CarCard';
+import '../PopularCars/PopularCars.css';
 
 const RecommendationCars = () => {
   const [recommendationCars, setRecommendationCars] = useState([]);

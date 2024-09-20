@@ -1,6 +1,6 @@
 // src/components/RentalOptions.js
 import React, { useState, useEffect } from 'react';
-import '../CSS/RentalOptions.css';
+import './RentalOptions.css';
 
 const RentalOptions = () => {
   const [cities, setCities] = useState([]);

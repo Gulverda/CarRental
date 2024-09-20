@@ -1,8 +1,8 @@
 // RentForm.js
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import StarRating from '../components/StarRating'; // Import the StarRating component
-import '../CSS/RentForm.css';
+import StarRating from '../../components/StarRating/index'; // Import the StarRating component
+import './RentForm.css';
 
 const RentForm = () => {
     const location = useLocation();

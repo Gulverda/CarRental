@@ -1,8 +1,8 @@
 // src/components/Banner.js
 import React from 'react';
-import '../CSS/Banner.css';
-import LeftCar from '../assets/LeftCar.png';
-import RightCar from '../assets/RightCar.png';
+import './Banner.css';
+import LeftCar from '../../assets/LeftCar.png';
+import RightCar from '../../assets/RightCar.png';
 
 const Banner = () => {
   return (

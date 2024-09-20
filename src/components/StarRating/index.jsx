@@ -1,6 +1,6 @@
 // StarRating.js
 import React from 'react';
-import '../CSS/StarRating.css'; // Ensure this path is correct
+import './StarRating.css'; // Ensure this path is correct
 
 const StarRating = ({ rating }) => {
     const starCount = 5; // Number of stars

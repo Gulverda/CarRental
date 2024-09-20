@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './SearchDetails.css';
-import CarCard from '../../components/CarCard';
+import CarCard from '../../components/CarCard/CarCard';
 import useIsMobile from '../../hooks/useIsMobile';
 
 

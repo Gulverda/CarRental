@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../CSS/CarCard.css';
-import profile from '../assets/icons/profile.svg';
-import Transmission from '../assets/icons/Car.svg';
-import GasStation from '../assets/icons/gasStation.svg';
+import './CarCard.css';
+import profile from '../../assets/icons/profile.svg';
+import Transmission from '../../assets/icons/Car.svg';
+import GasStation from '../../assets/icons/gasStation.svg';
 
 // Remove the id prop from here if you're using useParams
 const CarCard = ({ id, name, type, price, oldPrice, imgUrl, fuel, transmission, capacity, rating, initialLiked = false }) => {
