@@ -47,7 +47,7 @@ const CarDetailPage = ({ carsData }) => {
               <img src={mainImage} alt={car.name} className="car-main-image" />
             </div>
             <div className="car-sub-images">
-              {[car.subImage1, car.subImage2, car.subImage3].map((subImg, index) => (
+              {[car.imgUrl, car.subImage2, car.subImage3].map((subImg, index) => (
                 <div className="car_sub" key={index}>
                   <img
                     src={subImg}
