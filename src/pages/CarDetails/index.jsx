@@ -36,9 +36,6 @@ const CarDetailPage = ({ carsData }) => {
     navigate(`/rent/${id}`, { state: { car } });
   };
 
-  console.log(car.subImage1, car.subImage2, car.subImage3);
-
-
   const displayedTestimonials = showAllReviews ? car.testimonials : car.testimonials.slice(0, 2);
 
   return (
