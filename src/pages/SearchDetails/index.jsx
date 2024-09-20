@@ -199,7 +199,8 @@ const SearchDetails = () => {
                 fuel={car.fuel}
                 capacity={car.capacity}
                 transmission={car.transmission}
-              />
+                rating={car.rating || 2} // Ensure rating is passed
+                />
             ))
           ) : (
             <p>No cars found matching the selected filters.</p>
