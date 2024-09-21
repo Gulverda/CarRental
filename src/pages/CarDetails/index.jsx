@@ -79,8 +79,10 @@ const CarDetailPage = ({ carsData }) => {
             <p>Gasoline: <strong>{car.fuel}L</strong></p>
           </div>
           <div className="car-pricing">
+            <div className="prices">
             <p className="car-price">${car.price}.00/day</p>
             {car.oldPrice && <p className="car-old-price">${car.oldPrice}.00</p>}
+            </div>
             <button className="rent-now-button" onClick={handleRentNowClick}>Rent Now</button>
           </div>
         </div>

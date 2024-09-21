@@ -151,6 +151,12 @@
     color: #888;
     text-decoration: line-through;
   }
+
+  .prices{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   
   .rent-now-button {
     background-color: #3366ff;
