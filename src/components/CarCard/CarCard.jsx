@@ -27,10 +27,14 @@ const CarCard = ({ id, name, type, price, oldPrice, imgUrl, fuel, transmission, 
   };
 
   const handleCardClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
     navigate(`/car/${id}`);
   };
 
   const handleRentNowClick = (e) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
     e.stopPropagation();
     navigate(`/rent/${id}`, { state: { car: { id, name, type, price, imgUrl, fuel, transmission, capacity, rating } } });
   };
