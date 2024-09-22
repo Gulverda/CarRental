@@ -166,7 +166,7 @@ const RentForm = () => {
                         <h3>Confirmation</h3>
                         <span>We are getting to the end. Just a few clicks and your rental is ready!</span>
                         </div>
-                        <span>2 out of 3</span>
+                        <span>3 out of 3</span>
                         </div>
                     <div className="checkboxs_for_rent_form">
                     <div className="checkbox-row">
