@@ -97,7 +97,7 @@ const Header = () => {
         )}
       </div>
       <div className="detail_search">
-        <button className="filter_button" onClick={handleDetailSearchClick}>
+        <button className="filter_button" aria-label="Filter Options" onClick={handleDetailSearchClick}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M22 6.5H16" stroke="#596780" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M6 6.5H2" stroke="#596780" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
