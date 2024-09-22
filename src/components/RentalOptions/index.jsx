@@ -33,9 +33,11 @@ const RentalOptions = () => {
   return (
     <div className="rental-options">
       <div className="option">
-        <label>Pick-Up</label>
+        <label for="pickup-city">Pick-Up</label>
         <div className="fields">
           <select
+          id="pickup-city"
+          name="pickup-city"
             value={pickUp.city}
             onChange={(e) => setPickUp({ ...pickUp, city: e.target.value })}
           >
@@ -75,9 +77,11 @@ const RentalOptions = () => {
       </div>
 
       <div className="option">
-        <label>Drop-Off</label>
+        <label for="dropoff-city">Drop-Off</label>
         <div className="fields">
           <select
+          id="dropoff-city"
+          name="dropoff-city"
             value={dropOff.city}
             onChange={(e) => setDropOff({ ...dropOff, city: e.target.value })}
           >
